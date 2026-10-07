@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Witchsky wide Amadea
 @namespace      witchsky.app
-@version        1.18.1
+@version        1.18.2
 @description    A mostly stable-selector port of jb's *key-like Witchsky userstyle
 @author         xan.lol & amadea-system
 @license        MIT
@@ -11,15 +11,22 @@
     "Normal size" : "515px",
     "Full-width" : "100%"
 }
+@var select wskyFeedWidth "Post feed width" {
+    "Normal size" : "800px",
+    "90% width"   : "90%",
+    "Full-width"  : "100%",
+}
 ==/UserStyle== */
 @-moz-document domain("witchsky.app") {
     :root {
 /*         --wsky-userstyle-chrome: rgb(0, 28, 60); */
 /*         --wsky-userstyle-card: rgb(0, 17, 36); */
-        --wsky-userstyle-feed-width: 800px;
+/*         --wsky-userstyle-feed-width: 800px; */
         --wsky-userstyle-media-width: var(--wskyMediaWidth, 515px);
         --wsky-userstyle-left-width: 240px;
         --wsky-userstyle-sidebar-width: 330px;
+        
+        --wsky-userstyle-feed-width: var(--wskyFeedWidth, 800px);
     }
 
     .wsky-main {
