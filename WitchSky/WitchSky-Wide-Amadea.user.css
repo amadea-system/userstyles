@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Witchsky wide Amadea
 @namespace      witchsky.app
-@version        1.18.2
+@version        1.18.3
 @description    A mostly stable-selector port of jb's *key-like Witchsky userstyle
 @author         xan.lol & amadea-system
 @license        MIT
@@ -40,6 +40,15 @@
         width: 100% !important;
         max-width: var(--wsky-userstyle-feed-width) !important;
         transform: none !important;
+    }
+
+    .wsky-screen {
+        /* 
+        * This fixes the Repost Btn Layout issue.
+        * Only needed when wsky-userstyle-feed-width is a percentage on Chromium
+        * Could maybe be fixed with a different approach? Or avoided altogether by doing something else
+        */
+        width: calc(100vw - var(--wsky-userstyle-left-width) - var(--wsky-userstyle-sidebar-width) - 1em) !important;
     }
 
     .wsky-main div:has(+ .wsky-screen) {
